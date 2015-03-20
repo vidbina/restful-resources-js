@@ -1,104 +1,55 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'adduser' ]
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'https://github.com/sambou/restful-resources-js#0.0.0' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
-4 verbose adduser before first PUT { name: 'sami',
-4 verbose adduser   password: 'XXXXX',
-4 verbose adduser   email: 'sboussaid3@gmail.com',
-4 verbose adduser   _id: 'org.couchdb.user:sami',
-4 verbose adduser   type: 'user',
-4 verbose adduser   roles: [],
-4 verbose adduser   date: '2015-03-20T10:02:18.009Z' }
-5 verbose request where is /-/user/org.couchdb.user:sami
-6 verbose request registry https://registry.npmjs.org/
-7 verbose request id c03413976c78ff57
-8 verbose url raw /-/user/org.couchdb.user:sami
-9 verbose url resolving [ 'https://registry.npmjs.org/',
-9 verbose url resolving   './-/user/org.couchdb.user:sami' ]
-10 verbose url resolved https://registry.npmjs.org/-/user/org.couchdb.user:sami
-11 verbose request where is https://registry.npmjs.org/-/user/org.couchdb.user:sami
-12 info trying registry request attempt 1 at 11:02:18
-13 http PUT https://registry.npmjs.org/-/user/org.couchdb.user:sami
-14 http 409 https://registry.npmjs.org/-/user/org.couchdb.user:sami
-15 verbose headers { date: 'Fri, 20 Mar 2015 10:02:19 GMT',
-15 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-15 verbose headers   'content-type': 'application/json',
-15 verbose headers   'cache-control': 'max-age=60',
-15 verbose headers   'content-length': '58',
-15 verbose headers   'accept-ranges': 'bytes',
-15 verbose headers   via: '1.1 varnish',
-15 verbose headers   'x-served-by': 'cache-fra1246-FRA',
-15 verbose headers   'x-cache': 'MISS',
-15 verbose headers   'x-cache-hits': '0',
-15 verbose headers   'x-timer': 'S1426845738.412054,VS0,VE663',
-15 verbose headers   'keep-alive': 'timeout=10, max=50',
-15 verbose headers   connection: 'Keep-Alive' }
-16 verbose adduser update existing user
-17 verbose request where is /-/user/org.couchdb.user:sami?write=true
-18 verbose request registry https://registry.npmjs.org/
-19 verbose url raw /-/user/org.couchdb.user:sami?write=true
-20 verbose url resolving [ 'https://registry.npmjs.org/',
-20 verbose url resolving   './-/user/org.couchdb.user:sami?write=true' ]
-21 verbose url resolved https://registry.npmjs.org/-/user/org.couchdb.user:sami?write=true
-22 verbose request where is https://registry.npmjs.org/-/user/org.couchdb.user:sami?write=true
-23 info trying registry request attempt 1 at 11:02:19
-24 http GET https://registry.npmjs.org/-/user/org.couchdb.user:sami?write=true
-25 http 200 https://registry.npmjs.org/-/user/org.couchdb.user:sami?write=true
-26 verbose adduser userobj { name: 'sami',
-26 verbose adduser   password: 'XXXXX',
-26 verbose adduser   email: 'sboussaid3@gmail.com',
-26 verbose adduser   _id: 'org.couchdb.user:sami',
-26 verbose adduser   type: 'user',
-26 verbose adduser   roles: [],
-26 verbose adduser   date: '2015-03-20T10:02:18.009Z' }
-27 verbose request where is /-/user/org.couchdb.user:sami/-rev/2-c1be90855b0bcf90543aa4b210e42c2f
-28 verbose request registry https://registry.npmjs.org/
-29 verbose url raw /-/user/org.couchdb.user:sami/-rev/2-c1be90855b0bcf90543aa4b210e42c2f
-30 verbose url resolving [ 'https://registry.npmjs.org/',
-30 verbose url resolving   './-/user/org.couchdb.user:sami/-rev/2-c1be90855b0bcf90543aa4b210e42c2f' ]
-31 verbose url resolved https://registry.npmjs.org/-/user/org.couchdb.user:sami/-rev/2-c1be90855b0bcf90543aa4b210e42c2f
-32 verbose request where is https://registry.npmjs.org/-/user/org.couchdb.user:sami/-rev/2-c1be90855b0bcf90543aa4b210e42c2f
-33 info trying registry request attempt 1 at 11:02:19
-34 http PUT https://registry.npmjs.org/-/user/org.couchdb.user:sami/-rev/2-c1be90855b0bcf90543aa4b210e42c2f
-35 http 401 https://registry.npmjs.org/-/user/org.couchdb.user:sami/-rev/2-c1be90855b0bcf90543aa4b210e42c2f
-36 verbose headers { date: 'Fri, 20 Mar 2015 10:02:20 GMT',
-36 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-36 verbose headers   'content-type': 'application/json',
-36 verbose headers   'cache-control': 'max-age=60',
-36 verbose headers   'content-length': '67',
-36 verbose headers   'accept-ranges': 'bytes',
-36 verbose headers   via: '1.1 varnish',
-36 verbose headers   'x-served-by': 'cache-fra1245-FRA',
-36 verbose headers   'x-cache': 'MISS',
-36 verbose headers   'x-cache-hits': '0',
-36 verbose headers   'x-timer': 'S1426845739.628846,VS0,VE668',
-36 verbose headers   'keep-alive': 'timeout=10, max=50',
-36 verbose headers   connection: 'Keep-Alive' }
-37 verbose adduser back [ [Error: unauthorized Name or password is incorrect.: -/user/org.couchdb.user:sami/-rev/2-c1be90855b0bcf90543aa4b210e42c2f],
-37 verbose adduser   { error: 'unauthorized',
-37 verbose adduser     reason: 'Name or password is incorrect.' },
-37 verbose adduser   '{"error":"unauthorized","reason":"Name or password is incorrect."}' ]
-38 warn adduser Incorrect username or password
-38 warn adduser You can reset your account by visiting:
-38 warn adduser
-38 warn adduser     https://npmjs.org/forgot
-39 error Error: unauthorized Name or password is incorrect.: -/user/org.couchdb.user:sami/-rev/2-c1be90855b0bcf90543aa4b210e42c2f
-39 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:308:14)
-39 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:246:65)
-39 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:236:22)
-39 error     at Request.emit (events.js:98:17)
-39 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1142:14)
-39 error     at Request.emit (events.js:117:20)
-39 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1096:12)
-39 error     at IncomingMessage.emit (events.js:117:20)
-39 error     at _stream_readable.js:943:16
-39 error     at process._tickCallback (node.js:419:13)
-40 error If you need help, you may report this *entire* log,
-40 error including the npm and node versions, at:
-40 error     <http://github.com/npm/npm/issues>
-41 error System Darwin 14.1.0
-42 error command "node" "/usr/local/bin/npm" "adduser"
-43 error cwd /Users/sami/workspace/restful-resources-js
-44 error node -v v0.10.32
-45 error npm -v 1.4.28
-46 verbose exit [ 1, true ]
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'https://github.com/sambou/restful-resources-js#0.0.0', null ]
+6 verbose cache add name=undefined spec="https://github.com/sambou/restful-resources-js#0.0.0" args=["https://github.com/sambou/restful-resources-js#0.0.0",null]
+7 verbose parsed url { protocol: 'https:',
+7 verbose parsed url   slashes: true,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: 'github.com',
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: 'github.com',
+7 verbose parsed url   hash: '#0.0.0',
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '/sambou/restful-resources-js',
+7 verbose parsed url   path: '/sambou/restful-resources-js',
+7 verbose parsed url   href: 'https://github.com/sambou/restful-resources-js#0.0.0' }
+8 silly lockFile 0d201932-ambou-restful-resources-js-0-0-0 https://github.com/sambou/restful-resources-js#0.0.0
+9 verbose lock https://github.com/sambou/restful-resources-js#0.0.0 /Users/sami/.npm/0d201932-ambou-restful-resources-js-0-0-0.lock
+10 verbose addRemoteTarball [ 'https://github.com/sambou/restful-resources-js#0.0.0', null ]
+11 info retry fetch attempt 1 at 11:10:29
+12 verbose fetch to= /var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js
+13 http GET https://github.com/sambou/restful-resources-js#0.0.0
+14 http 200 https://github.com/sambou/restful-resources-js#0.0.0
+15 verbose tar unpack /var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js
+16 silly lockFile c80f3086-mbou-restful-resources-js-unpack tar:///var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js-unpack
+17 verbose lock tar:///var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js-unpack /Users/sami/.npm/c80f3086-mbou-restful-resources-js-unpack.lock
+18 silly lockFile 292a1345--com-sambou-restful-resources-js tar:///var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js
+19 verbose lock tar:///var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js /Users/sami/.npm/292a1345--com-sambou-restful-resources-js.lock
+20 silly gunzTarPerm modes [ '755', '644' ]
+21 error not a package /var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js
+22 silly lockFile c80f3086-mbou-restful-resources-js-unpack tar:///var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js-unpack
+23 silly lockFile c80f3086-mbou-restful-resources-js-unpack tar:///var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js-unpack
+24 silly lockFile 292a1345--com-sambou-restful-resources-js tar:///var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js
+25 silly lockFile 292a1345--com-sambou-restful-resources-js tar:///var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js
+26 silly lockFile 0d201932-ambou-restful-resources-js-0-0-0 https://github.com/sambou/restful-resources-js#0.0.0
+27 silly lockFile 0d201932-ambou-restful-resources-js-0-0-0 https://github.com/sambou/restful-resources-js#0.0.0
+28 error Error: ENOENT, open '/var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js-unpack/package.json'
+29 error If you need help, you may report this *entire* log,
+29 error including the npm and node versions, at:
+29 error     <http://github.com/npm/npm/issues>
+30 error System Darwin 14.1.0
+31 error command "node" "/usr/local/bin/npm" "install" "https://github.com/sambou/restful-resources-js#0.0.0"
+32 error cwd /Users/sami/workspace/restful-resources-js
+33 error node -v v0.10.32
+34 error npm -v 1.4.28
+35 error path /var/folders/6q/zf1gcpgs2137wndbhnwxc2m80000gp/T/npm-20665-IpkkY24g/github.com/sambou/restful-resources-js-unpack/package.json
+36 error code ENOENT
+37 error errno 34
+38 verbose exit [ 34, true ]
