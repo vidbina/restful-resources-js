@@ -22,7 +22,8 @@ User.get(1).then(function(user) {
     user.save();
 });
 
-//get all (depending on your endpoint this is probably not *all*, but the first n or so) UserResource
+//get all Users
+//(depending on your endpoint this is probably not *all*) 
 User.get().then(function(users) {
     allUsers = users;
 });
