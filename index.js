@@ -18,13 +18,11 @@
                 dataType: 'json',
                 type: 'post',
                 data: data,
-                success: function(res) {
-                    var a = $.extend(that, res);
-                    resolve(a);
+                success: function(response) {
+                    var resource = $.extend({}, that, response);
+                    resolve(resource);
                 },
-                error: function() {
-                    //TODO: handle error message
-                }
+                error: reject
             });
         });
 
@@ -39,9 +37,18 @@
                 dataType: 'json',
                 type: 'get',
                 url: url,
-                success: function(res) {
-                    var a = $.extend(that, res);
-                    resolve(a);
+                success: function(response) {
+                    var resource;
+
+                    if (typeof response === 'object' && response.length) {
+                        resource = response.map(function(resourceObject) {
+                            return $.extend({}, that, resourceObject);
+                        });
+                    } else {
+                        resource = $.extend(that, response);
+                    }
+
+                    resolve(resource);
                 },
                 error: reject
             });
@@ -66,12 +73,8 @@
                 dataType: 'json',
                 type: 'put',
                 data: payload,
-                success: function(res) {
-                    resolve(res);
-                },
-                error: function(res) {
-                    reject(res);
-                }
+                success: resolve,
+                error: reject
             });
         });
 
@@ -87,12 +90,8 @@
                 url: url,
                 dataType: 'json',
                 type: 'delete',
-                success: function(res) {
-                    resolve(res);
-                },
-                error: function(res) {
-                    reject(res);
-                }
+                success: resolve,
+                error: reject
             });
         });
 
@@ -100,5 +99,5 @@
     };
 
     module.exports = Resource;
-    
+
 })();
