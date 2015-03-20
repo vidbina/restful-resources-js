@@ -1,5 +1,5 @@
 # restful-resources-js
-Small library for using restful resources in your javascript code. Inspired by [angularjs-rails-resource](https://github.com/FineLinePrototyping/angularjs-rails-resource), but with the aim to be framework-agnostic.
+Small library for using restful resources in your javascript. Inspired by [angularjs-rails-resource](https://github.com/FineLinePrototyping/angularjs-rails-resource), but with the aim to be framework-agnostic.
 
 ## Usage
 ```javascript
@@ -23,7 +23,7 @@ User.get(1).then(function(user) {
 });
 
 //get all Users
-//(depending on your endpoint this is probably not *all*) 
+//(depending on your endpoint this is probably not *all*)
 User.get().then(function(users) {
     allUsers = users;
 });
