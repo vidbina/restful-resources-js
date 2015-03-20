@@ -4,16 +4,16 @@ Small library for using restful resources in your javascript code. Inspired by [
 ## Usage
 ```javascript
 var Resource = require('./resource.js');
-var UserResource = new Resource({name: 'user', resourceUrl: '/api/v1/users/'});
-var localUser;
+var User = new Resource({name: 'user', resourceUrl: '/api/v1/users/'});
+var localUser, allUsers;
 
-//create a UserResource on the server
-UserResource.create({name: 'Peter'}).then(function(user) {
+//create a User on the server
+User.create({name: 'Peter'}).then(function(user) {
 
 });
 
-//get a UserResource via id
-UserResource.get(1).then(function(user) {
+//get a User via id
+User.get(1).then(function(user) {
     //use it...
     localUser = user;
 
@@ -22,8 +22,13 @@ UserResource.get(1).then(function(user) {
     user.save();
 });
 
-//delete a UserResource
-UserResource.delete(1).then(function() {
+//get all (depending on your endpoint this is probably not *all*, but the first n or so) UserResource
+User.get().then(function(users) {
+    allUsers = users;
+});
+
+//delete a User
+User.delete(1).then(function() {
 
 });
 ```
